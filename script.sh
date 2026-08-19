@@ -9,3 +9,15 @@ docker image ls
 docker build -t fathirrzkii/belajar-docker:run run
 
 docker build -t fathirrzkii/belajar-docker:run run --progress=plain --no-cache
+
+# COMMAND Instuction
+
+docker build -t fathirrzkii/belajar-docker:command command
+
+docker image inspect fathrrzkii/belajar-docker:command
+
+docker container create --name command fathirrzkii/belajar-docker:command
+
+docker container start command
+
+docker container logs command
