@@ -55,3 +55,17 @@ docker container create --name ignore fathirrzkii/belajar-docker:ignore
 docker container start ignore
 
 docker container logs ignore
+
+# EXPOSE Instruction
+
+docker build -t fathirrzkii/belajar-docker:expose expose
+
+docker image inspect fathirrzkii/belajar-docker:expose 
+
+docker container create --name expose -p 8080:8080 fathirrzkii/belajar-docker:expose
+
+docker container start expose
+
+docker container logs expose
+
+docker container stop expose
