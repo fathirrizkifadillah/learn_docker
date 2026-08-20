@@ -21,3 +21,9 @@ docker container create --name command fathirrzkii/belajar-docker:command
 docker container start command
 
 docker container logs command
+
+# LABEL Instruction
+
+docker build -t fathirrzkii/belajar-docker:label label
+
+docker image inspect fathirrzkii/belajar-docker:label
