@@ -27,3 +27,12 @@ docker container logs command
 docker build -t fathirrzkii/belajar-docker:label label
 
 docker image inspect fathirrzkii/belajar-docker:label
+
+# ADD Instruction
+docker build -t fathirrzkii/belajar-docker:add add
+
+docker container create --name add fathirrzkii/belajar-docker:add
+
+docker container start add
+
+docker container logs add
