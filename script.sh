@@ -36,3 +36,12 @@ docker container create --name add fathirrzkii/belajar-docker:add
 docker container start add
 
 docker container logs add
+
+# COPY Instruction
+docker build -t fathirrzkii/belajar-docker:copy copy
+
+docker container create --name copy fathirrzkii/belajar-docker:copy
+
+docker container start copy
+
+docker container logs copy
