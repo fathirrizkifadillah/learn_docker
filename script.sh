@@ -45,3 +45,13 @@ docker container create --name copy fathirrzkii/belajar-docker:copy
 docker container start copy
 
 docker container logs copy
+
+# .dockerignore
+
+docker build -t fathirrzkii/belajar-docker:ignore ignore
+
+docker container create --name ignore fathirrzkii/belajar-docker:ignore
+
+docker container start ignore
+
+docker container logs ignore
