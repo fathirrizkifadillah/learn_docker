@@ -69,3 +69,10 @@ docker container start expose
 docker container logs expose
 
 docker container stop expose
+
+# ENV Instruction
+docker build -t fathirrzkii/belajar-docker:env env
+
+docker image inspect fathirrzkii/belajar-docker:env
+
+docker container create --name env --env APP_PORT=9090 -p 9090:9090 fathirrzkii/belajar-docker:env
