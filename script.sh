@@ -76,3 +76,28 @@ docker build -t fathirrzkii/belajar-docker:env env
 docker image inspect fathirrzkii/belajar-docker:env
 
 docker container create --name env --env APP_PORT=9090 -p 9090:9090 fathirrzkii/belajar-docker:env
+
+docker container start env
+
+docker container ls
+
+docker container logs env
+
+docker container stop env
+
+# VOLUME Instruction
+docker build -t fathirrzkii/belajar-docker:volume volume
+
+docker image inspect fathirrzkii/belajar-docker:volume
+
+docker container create --name volume -p 8080:8080 fathirrzkii/belajar-docker:volume
+
+docker container start volume
+
+docker container logs volume
+
+docker container inspect volume
+
+# e783e6f16bf4f75db07093590c55857e82a3148bf0ddc99594caf5ee91d008dc
+
+docker volume ls
