@@ -112,3 +112,15 @@ docker container start workdir
 docker container exec -i -t workdir /bin/sh
 
 docker container stop workdir
+
+# USER Instruction
+
+docker build -t fathirrzkii/belajar-docker:user user
+
+docker container create --name user -p 8080:8080 fathirrzkii/belajar-docker:user
+
+docker container start user
+
+docker container exec -i -t user /bin/sh
+
+docker container stop user
