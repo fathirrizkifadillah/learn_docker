@@ -101,3 +101,14 @@ docker container inspect volume
 # e783e6f16bf4f75db07093590c55857e82a3148bf0ddc99594caf5ee91d008dc
 
 docker volume ls
+
+# WORKDIR Instruction
+docker build -t fathirrzkii/belajar-docker:workdir workdir
+
+docker container create --name workdir -p 8080:8080 fathirrzkii/belajar-docker:workdir
+
+docker container start workdir
+
+docker container exec -i -t workdir /bin/sh
+
+docker container stop workdir
