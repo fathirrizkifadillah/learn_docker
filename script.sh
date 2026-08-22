@@ -124,3 +124,15 @@ docker container start user
 docker container exec -i -t user /bin/sh
 
 docker container stop user
+
+# ARG Instruction
+
+docker build -t fathirrzkii/belajar-docker:arg arg --build-arg app=ton
+
+docker container create --name arg -p 8080:8080 fathirrzkii/belajar-docker:arg
+
+docker container start arg
+
+docker container exec -i -t arg /bin/sh
+
+docker container stop arg
