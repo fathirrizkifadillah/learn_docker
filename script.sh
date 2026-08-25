@@ -174,3 +174,16 @@ docker image ls
 docker container create --name multi -p 8080:8080 fathirrzkii/belajar-docker:multi
 
 docker container start multi
+
+# DOCKER HUB PUSH
+
+docker login -u fathirrzkii
+
+password : <- isi token dari docker
+
+docker push (nama image)
+
+# kalau belum punya tag
+
+docker tag (image-lokal):(tag) (username-dockerhub)/(repository):(tag)
+# baru push
