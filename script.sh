@@ -127,7 +127,7 @@ docker container stop user
 
 # ARG Instruction
 
-docker build -t fathirrzkii/belajar-docker:arg arg --build-arg app=ton
+docker build -t fathirrzkii/belajar-docker:arg arg 
 
 docker container create --name arg -p 8080:8080 fathirrzkii/belajar-docker:arg
 
@@ -136,3 +136,28 @@ docker container start arg
 docker container exec -i -t arg /bin/sh
 
 docker container stop arg
+
+# HEALTHCHECK Instruction
+
+docker build -t fathirrzkii/belajar-docker:health health 
+
+docker container create --name health -p 8080:8080 fathirrzkii/belajar-docker:health
+
+docker container start health 
+
+docker container exec -i -t health /bin/sh
+
+docker container ls
+
+docker container stop health
+
+# ENTRYPOINT Instruction
+docker build -t fathirrzkii/belajar-docker:entrypoint entrypoint
+
+docker image inspect fathirrzkii/belajar-docker:entrypoint
+
+docker container create --name entrypoint -p 8080:8080 fathirrzkii/belajar-docker:entrypoint
+
+docker container create --name entrypoint -p 8080:8080 fathirrzkii/belajar-docker:entrypoint
+
+docker container start entrypoint
