@@ -161,3 +161,16 @@ docker container create --name entrypoint -p 8080:8080 fathirrzkii/belajar-docke
 docker container create --name entrypoint -p 8080:8080 fathirrzkii/belajar-docker:entrypoint
 
 docker container start entrypoint
+
+docker container stop entrypoint
+
+# MULTI STAGE BUILD
+docker build -t fathirrzkii/belajar-docker:multi multi
+
+docker container ls
+
+docker image ls
+
+docker container create --name multi -p 8080:8080 fathirrzkii/belajar-docker:multi
+
+docker container start multi
