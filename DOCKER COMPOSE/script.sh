@@ -9,3 +9,6 @@ docker compose stop
 
 # Untuk menghapus container yang ada di docker compose
 docker compose down
+
+# Untuk cek container yang sedang berjalan di docker compose
+docker compose ps
