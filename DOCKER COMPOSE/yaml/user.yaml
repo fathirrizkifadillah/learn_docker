@@ -1,0 +1,20 @@
+firstName : Fathir
+middleName : Rizki
+lastName : Fadillah
+hobbies : 
+  - Coding
+  - Reading
+  - Gaming
+  - Listening to song
+
+address :
+  street : Jl. Grand Mutiara Gading D2/14
+  city : Bekasi
+  country : Indonesia
+
+wallet :
+  - type : cash
+    amount : 100.000
+  - type : debut
+    amount : 1.000.000
+  
