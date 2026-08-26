@@ -1,1 +1,7 @@
-version : "3.8"
+services :
+  nginx-exampe :
+    container_name : nginx-example
+    image : nginx:latest
+  nginx-example2 :
+    container_name : nginx-example2
+    image : nginx:latest
