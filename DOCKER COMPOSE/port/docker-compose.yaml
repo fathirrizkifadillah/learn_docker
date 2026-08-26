@@ -1,0 +1,16 @@
+services :
+  nginx-port1:
+    image : nginx:latest
+    container_name : nginx-port1
+    ports :
+      - protocol : tcp # <- protocol port
+        published : 8080 # <- Port yang digunakan di port
+        target : 80 # <- Port di dalam container
+  
+  nginx-port2 :
+    image : nginx:latest
+    container_name : nginx-port2
+    ports :
+      - "8081:80"
+
+# HOST:CONTAINER
