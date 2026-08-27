@@ -1,0 +1,35 @@
+services:
+  mongodb-example:
+    image: mongo:latest
+    container_name: mongodb-example
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: fathirrzkii
+      MONGO_INITDB_ROOT_PASSWORD: fathirrzkii
+      MONGO_INITDB_DATABASE: admin
+    networks:
+      - network_example
+
+  mongodb-express-example:
+    image: mongo-express:latest
+    container_name: mongodb-express-example
+    ports:
+      - "8081:8081"
+    environment:
+      ME_CONFIG_MONGODB_URL: "mongodb://fathirrzkii:fathirrzkii@mongodb-example:27017/?authSource=admin"
+
+      ME_CONFIG_BASICAUTH_ENABLED: "true"
+      ME_CONFIG_BASICAUTH_USERNAME: "fathir"
+      ME_CONFIG_BASICAUTH_PASSWORD: "password123"
+
+    networks:
+      - network_example
+
+    depends_on:
+      - mongodb-example
+
+networks:
+  network_example:
+    name: network_example
+    driver: bridge
